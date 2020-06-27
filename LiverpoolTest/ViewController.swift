@@ -16,6 +16,8 @@ class ViewController: UIViewController {
     
     var records:[RecordModel]?
     var recordsCD:[RecordEntity?]?
+    var searchTable: SearchTableViewController?
+    var page = 1
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,7 +42,7 @@ class ViewController: UIViewController {
     
     func searchRequestWith(_ searchText: String) {
     
-        guard let url = URL(string: "https://shoppapp.liverpool.com.mx/appclienteservices/services/v3/plp?force-plp=true&search-string=\(searchText)&page-number=1&number-of-items-per-page=12") else {
+        guard let url = URL(string: "https://shoppapp.liverpool.com.mx/appclienteservices/services/v3/plp?force-plp=true&search-string=\(searchText)&page-number=\(page)&number-of-items-per-page=12") else {
             print("error URL")
             return
         }
@@ -58,7 +60,7 @@ class ViewController: UIViewController {
                 let responseModel = try JSONDecoder().decode(ResponseModel.self, from: jsonData)
                 self.records = responseModel.plpResults?.records
                 DispatchQueue.main.async {
-                    self.cleanEntity()
+                    self.page == 1 ? self.cleanEntity() : nil
                     self.records?.forEach({ (record) in
                         self.recordsCD?.append(self.createRecordEntity(recordModel: record))
                     })
@@ -155,11 +157,26 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-        
+        if indexPath.row == (recordsCD?.count ?? 0) - 2 {
+            guard let text = getLastSearchText() else { return }
+            self.page += 1
+            self.searchRequestWith(text)
+        }
     }
 }
 
 extension ViewController: UISearchBarDelegate {
+    
+    func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
+        self.searchTable = SearchTableViewController(nibName: "SearchTableViewController", bundle: Bundle.main)
+        searchTable?.view.frame = self.tableView.frame
+        searchTable?.view.tag = 123
+        searchTable?.update = self
+        self.addChild(searchTable!)
+        self.view.addSubview(searchTable?.view ?? UIView())
+        searchTable?.didMove(toParent: self)
+    }
+    
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
                 
     }
@@ -167,10 +184,20 @@ extension ViewController: UISearchBarDelegate {
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         if searchBar.text?.isEmpty ?? true {return}
         if searchBar.text?.hasSpecialCharacters() ?? true { return }
+        self.page = 1
         self.searchRequestWith(searchBar.text!)
         self.saveSearchText(with: searchBar.text!)
+        searchBar.resignFirstResponder()
         
+        let list = self.view.subviews.filter { (view) -> Bool in
+            return view.tag == 123
+        }.first
+        
+        self.searchTable?.removeFromParent()
+        list?.removeFromSuperview()
+        self.searchTable?.didMove(toParent: self)
     }
+    
 }
 
 extension String{
@@ -188,4 +215,15 @@ extension String{
         return false
         
     }
+}
+
+extension ViewController:SearchProtocol{
+    func updateSearch(with text: String) {
+        self.searchBar.text = text
+        self.searchBarSearchButtonClicked(self.searchBar)
+    }
+}
+
+protocol SearchProtocol {
+    func updateSearch(with text: String)
 }

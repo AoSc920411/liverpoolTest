@@ -9,7 +9,7 @@
 import UIKit
 
 class ProductCellTableViewCell: UITableViewCell {
-
+    
     @IBOutlet weak var productImage: UIImageView!
     @IBOutlet weak var productTitle: UILabel!
     @IBOutlet weak var location: UILabel!
@@ -19,10 +19,10 @@ class ProductCellTableViewCell: UITableViewCell {
         super.awakeFromNib()
         // Initialization code
     }
-
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
+        
         // Configure the view for the selected state
     }
     
@@ -38,15 +38,16 @@ class ProductCellTableViewCell: UITableViewCell {
 
 extension UIImageView {
     func imgFromURLString(_ urlString: String?, tag: Int) {
+        self.image = nil
         guard let url = URL(string: urlString ?? "") else {return}
         let urlRequest = URLRequest(url: url, cachePolicy: .reloadIgnoringLocalCacheData, timeoutInterval: 20)
         let session = URLSession.shared
         session.dataTask(with: urlRequest) { (info, response, error) in
             if error != nil{ return }
             DispatchQueue.main.async {
-            if self.tag == tag{
-                guard let data = info else { return }
-                self.image = UIImage(data: data)
+                if self.tag == tag{
+                    guard let data = info else { return }
+                    self.image = UIImage(data: data)
                 }
             }
         }.resume()
