@@ -16,6 +16,10 @@
 		663E918E24A7B5AC0045A55A /* ProductCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 663E918C24A7B5AC0045A55A /* ProductCellTableViewCell.swift */; };
 		663E918F24A7B5AC0045A55A /* ProductCellTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 663E918D24A7B5AC0045A55A /* ProductCellTableViewCell.xib */; };
 		663E919124A7BD970045A55A /* RequestResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 663E919024A7BD970045A55A /* RequestResponseModel.swift */; };
+		6640209B24A7D86200850D37 /* RecordEntity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6640209924A7D86200850D37 /* RecordEntity+CoreDataClass.swift */; };
+		6640209C24A7D86200850D37 /* RecordEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6640209A24A7D86200850D37 /* RecordEntity+CoreDataProperties.swift */; };
+		6640209F24A7E36600850D37 /* SearchString+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6640209D24A7E36600850D37 /* SearchString+CoreDataClass.swift */; };
+		664020A024A7E36600850D37 /* SearchString+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6640209E24A7E36600850D37 /* SearchString+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +34,10 @@
 		663E918C24A7B5AC0045A55A /* ProductCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCellTableViewCell.swift; sourceTree = "<group>"; };
 		663E918D24A7B5AC0045A55A /* ProductCellTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductCellTableViewCell.xib; sourceTree = "<group>"; };
 		663E919024A7BD970045A55A /* RequestResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestResponseModel.swift; sourceTree = "<group>"; };
+		6640209924A7D86200850D37 /* RecordEntity+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RecordEntity+CoreDataClass.swift"; sourceTree = "<group>"; };
+		6640209A24A7D86200850D37 /* RecordEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RecordEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		6640209D24A7E36600850D37 /* SearchString+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SearchString+CoreDataClass.swift"; sourceTree = "<group>"; };
+		6640209E24A7E36600850D37 /* SearchString+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SearchString+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +80,10 @@
 				663E918324A7B3A70045A55A /* LaunchScreen.storyboard */,
 				663E918624A7B3A70045A55A /* Info.plist */,
 				663E917E24A7B3A30045A55A /* LiverpoolTest.xcdatamodeld */,
+				6640209924A7D86200850D37 /* RecordEntity+CoreDataClass.swift */,
+				6640209A24A7D86200850D37 /* RecordEntity+CoreDataProperties.swift */,
+				6640209D24A7E36600850D37 /* SearchString+CoreDataClass.swift */,
+				6640209E24A7E36600850D37 /* SearchString+CoreDataProperties.swift */,
 			);
 			path = LiverpoolTest;
 			sourceTree = "<group>";
@@ -148,10 +160,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6640209F24A7E36600850D37 /* SearchString+CoreDataClass.swift in Sources */,
+				6640209C24A7D86200850D37 /* RecordEntity+CoreDataProperties.swift in Sources */,
 				663E919124A7BD970045A55A /* RequestResponseModel.swift in Sources */,
+				664020A024A7E36600850D37 /* SearchString+CoreDataProperties.swift in Sources */,
 				663E917A24A7B3A20045A55A /* ViewController.swift in Sources */,
 				663E918E24A7B5AC0045A55A /* ProductCellTableViewCell.swift in Sources */,
 				663E917624A7B3A20045A55A /* AppDelegate.swift in Sources */,
+				6640209B24A7D86200850D37 /* RecordEntity+CoreDataClass.swift in Sources */,
 				663E918024A7B3A30045A55A /* LiverpoolTest.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

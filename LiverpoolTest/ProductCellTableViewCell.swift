@@ -26,9 +26,9 @@ class ProductCellTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    func fill(record: Records?, tag: Int) {
+    func fill(record: RecordEntity?, tag: Int) {
         self.productTitle.text = record?.productDisplayName
-        self.price.text = "\(record?.promoPrice ?? 0)"
+        self.price.text = "\(record?.listPrice ?? 0)"
         self.location.text = record?.productType
         self.productImage.tag = tag
         self.productImage.imgFromURLString(record?.lgImage, tag: tag)

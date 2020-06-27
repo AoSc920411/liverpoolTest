@@ -20,10 +20,10 @@ public struct StatusModel: Decodable {
 }
 
 public struct PlpResults: Decodable {
-    var records: [Records]?
+    var records: [RecordModel]?
 }
 
-public struct Records: Decodable {
+public struct RecordModel: Decodable {
     
     var productId: String?
     var skuRepositoryId: String?
