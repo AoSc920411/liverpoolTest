@@ -1,4 +1,27 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1" systemVersion="11A491" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithCloudKit="false" userDefinedModelVersionIdentifier="">
-    <elements/>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="16119" systemVersion="19F101" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Record" representedClassName="Record" syncable="YES" codeGenerationType="class">
+        <attribute name="groupType" optional="YES" attributeType="String"/>
+        <attribute name="isHybrid" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="isImportationProduct" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="isMarketPlace" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="lgImage" optional="YES" attributeType="String"/>
+        <attribute name="listPrice" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="maximumListPrice" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="maximumPromoPrice" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="minimumListPrice" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="minimumPromoPrice" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="productAvgRating" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="productDisplayName" optional="YES" attributeType="String"/>
+        <attribute name="productId" optional="YES" attributeType="String"/>
+        <attribute name="productRatingCount" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="productType" optional="YES" attributeType="String"/>
+        <attribute name="promoPrice" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="skuRepositoryId" optional="YES" attributeType="String"/>
+        <attribute name="smImage" optional="YES" attributeType="String"/>
+        <attribute name="xlImage" optional="YES" attributeType="String"/>
+    </entity>
+    <elements>
+        <element name="Record" positionX="-63" positionY="-18" width="128" height="28"/>
+    </elements>
 </model>
