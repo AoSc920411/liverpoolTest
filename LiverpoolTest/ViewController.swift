@@ -8,6 +8,7 @@
 
 import UIKit
 import CoreData
+import AppCenterCrashes
 
 class ViewController: UIViewController {
 
@@ -18,6 +19,21 @@ class ViewController: UIViewController {
     var recordsCD:[RecordEntity?]?
     var searchTable: SearchTableViewController?
     var page = 1
+    
+    @IBAction func touch(_ sender: UIButton) {
+        let version = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String ?? "sinVersion"
+        let branch = Bundle.main.infoDictionary?["zbranch"] as? String ?? "sinbranch"
+        let commit = Bundle.main.infoDictionary?["zcommit"] as? String ?? "sincommit"
+        
+        let alert:UIAlertController = UIAlertController(title: "\(version)", message: "Liverpool ShoppingApp \n \(branch)\n \(commit)\nApp orgullosamente mexicana.", preferredStyle: UIAlertController.Style.alert)
+        
+        let okAction:UIAlertAction = UIAlertAction(title: "Ok", style: .default) { (action) in
+            MSCrashes.generateTestCrash()
+        }
+        alert.addAction(okAction)
+
+        self.present(alert, animated: true, completion: nil)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
