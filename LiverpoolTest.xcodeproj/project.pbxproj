@@ -22,9 +22,12 @@
 		664020A024A7E36600850D37 /* SearchString+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6640209E24A7E36600850D37 /* SearchString+CoreDataProperties.swift */; };
 		664020A324A7E6D400850D37 /* SearchTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 664020A124A7E6D400850D37 /* SearchTableViewController.swift */; };
 		664020A424A7E6D400850D37 /* SearchTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 664020A224A7E6D400850D37 /* SearchTableViewController.xib */; };
+		BFF5F709439C9FEF73E1BB22 /* Pods_LiverpoolTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C37A0CB65D379A5E764F3438 /* Pods_LiverpoolTest.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3475D6646C1F746C56581C48 /* Pods-LiverpoolTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LiverpoolTest.release.xcconfig"; path = "Target Support Files/Pods-LiverpoolTest/Pods-LiverpoolTest.release.xcconfig"; sourceTree = "<group>"; };
+		5109FBEBAB40E107FB8BE0F8 /* Pods-LiverpoolTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LiverpoolTest.debug.xcconfig"; path = "Target Support Files/Pods-LiverpoolTest/Pods-LiverpoolTest.debug.xcconfig"; sourceTree = "<group>"; };
 		663E917224A7B3A20045A55A /* LiverpoolTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LiverpoolTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		663E917524A7B3A20045A55A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		663E917924A7B3A20045A55A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -42,6 +45,7 @@
 		6640209E24A7E36600850D37 /* SearchString+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SearchString+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		664020A124A7E6D400850D37 /* SearchTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewController.swift; sourceTree = "<group>"; };
 		664020A224A7E6D400850D37 /* SearchTableViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchTableViewController.xib; sourceTree = "<group>"; };
+		C37A0CB65D379A5E764F3438 /* Pods_LiverpoolTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LiverpoolTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,6 +53,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BFF5F709439C9FEF73E1BB22 /* Pods_LiverpoolTest.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -60,6 +65,8 @@
 			children = (
 				663E917424A7B3A20045A55A /* LiverpoolTest */,
 				663E917324A7B3A20045A55A /* Products */,
+				ADB4CA484733E2462796AB3B /* Pods */,
+				90082202200C7DB319BA7EB0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -102,6 +109,24 @@
 			path = CoreData;
 			sourceTree = "<group>";
 		};
+		90082202200C7DB319BA7EB0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C37A0CB65D379A5E764F3438 /* Pods_LiverpoolTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		ADB4CA484733E2462796AB3B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5109FBEBAB40E107FB8BE0F8 /* Pods-LiverpoolTest.debug.xcconfig */,
+				3475D6646C1F746C56581C48 /* Pods-LiverpoolTest.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -109,6 +134,8 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 663E918924A7B3A70045A55A /* Build configuration list for PBXNativeTarget "LiverpoolTest" */;
 			buildPhases = (
+				DA3916386CB7F0387E31DFDF /* [CP] Check Pods Manifest.lock */,
+				E778AE0A251960790042E56A /* ShellScript */,
 				663E916E24A7B3A20045A55A /* Sources */,
 				663E916F24A7B3A20045A55A /* Frameworks */,
 				663E917024A7B3A20045A55A /* Resources */,
@@ -169,6 +196,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		DA3916386CB7F0387E31DFDF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-LiverpoolTest-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E778AE0A251960790042E56A /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nbranch=$(git status | head -n1)\ncommit=$(git log --oneline | head -n1)\n\necho $branch\necho $commit\necho ${INFOPLIST_FILE}\n\npwd\n\n/usr/libexec/PlistBuddy -c \"Delete :zbranch\" \"${INFOPLIST_FILE}\"\n/usr/libexec/PlistBuddy -c \"Delete :zcommit\" \"${INFOPLIST_FILE}\"\n\n/usr/libexec/PlistBuddy -c \"Add :zbranch string $branch\" \"${INFOPLIST_FILE}\"\n/usr/libexec/PlistBuddy -c \"Add :zcommit string $commit\" \"${INFOPLIST_FILE}\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		663E916E24A7B3A20045A55A /* Sources */ = {
@@ -326,6 +395,7 @@
 		};
 		663E918A24A7B3A70045A55A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5109FBEBAB40E107FB8BE0F8 /* Pods-LiverpoolTest.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -344,6 +414,7 @@
 		};
 		663E918B24A7B3A70045A55A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3475D6646C1F746C56581C48 /* Pods-LiverpoolTest.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

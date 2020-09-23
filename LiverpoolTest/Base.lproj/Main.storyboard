@@ -16,23 +16,33 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="JBv-3S-1ox">
-                                <rect key="frame" x="0.0" y="100" width="414" height="762"/>
+                                <rect key="frame" x="0.0" y="100" width="414" height="662"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             </tableView>
                             <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="oz5-No-FDm">
                                 <rect key="frame" x="0.0" y="44" width="414" height="56"/>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tyd-Vd-Pds">
+                                <rect key="frame" x="184" y="805" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="touch:" destination="BYZ-38-t0r" eventType="touchUpInside" id="D9u-l2-TLo"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="JBv-3S-1ox" firstAttribute="top" secondItem="oz5-No-FDm" secondAttribute="bottom" id="0JH-tb-3qn"/>
                             <constraint firstItem="oz5-No-FDm" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="1hx-YE-Xmm"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Tyd-Vd-Pds" secondAttribute="bottom" constant="27" id="3Jw-KJ-6aN"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="JBv-3S-1ox" secondAttribute="trailing" id="5Pl-4t-5PP"/>
                             <constraint firstItem="oz5-No-FDm" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="7BA-AN-iXx"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="JBv-3S-1ox" secondAttribute="bottom" id="98E-ZO-RCo"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="JBv-3S-1ox" secondAttribute="bottom" constant="100" id="98E-ZO-RCo"/>
                             <constraint firstItem="oz5-No-FDm" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="DpH-qd-XUN"/>
+                            <constraint firstItem="Tyd-Vd-Pds" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="ce4-r7-sub"/>
                             <constraint firstItem="JBv-3S-1ox" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="jN7-US-EQ4"/>
+                            <constraint firstItem="Tyd-Vd-Pds" firstAttribute="top" secondItem="JBv-3S-1ox" secondAttribute="bottom" constant="43" id="szF-wm-svU"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -43,7 +53,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="139" y="139"/>
+            <point key="canvasLocation" x="137.68115942028987" y="138.61607142857142"/>
         </scene>
     </scenes>
 </document>
