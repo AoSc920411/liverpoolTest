@@ -2,7 +2,7 @@ name: Swift
 
 on:
   create:
-    branches: [ dev ]
+    branches: [ master, dev, test]
 
 jobs:
   build:
