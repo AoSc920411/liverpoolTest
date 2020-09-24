@@ -11,4 +11,6 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: test File
-      run: git status
+      run: git status | head -n1 >> infoBranch.txt
+      run: git add .
+      run: git commit -m 'InfoGit' 
