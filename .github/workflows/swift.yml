@@ -1,7 +1,7 @@
 name: Swift
 
 on:
-  branch:
+  create:
     branches: [ dev ]
 
 jobs:
