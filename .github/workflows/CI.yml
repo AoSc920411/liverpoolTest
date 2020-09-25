@@ -13,7 +13,7 @@ jobs:
     - name: Make changes to pull request
       run: date +%s > report.txt
            git config user.name 'AoSc920411'
-           git config user.email 'AoSc920411@users.noreply.github.com'
+           git config user.email 'solano_alan@hotmail.com'
     - name: Create Pull Request
       id: cpr
       uses: peter-evans/create-pull-request@v3
@@ -21,7 +21,7 @@ jobs:
           token: ${{ secrets.PAT }}
           commit-message: Update report
           committer: GitHub <noreply@github.com>
-          author: ${{ github.actor }} <${{ github.actor }}@users.noreply.github.com>
+          author: 'solano_alan@hotmail.com'
           signoff: false
           branch: nuu
           delete-branch: false
