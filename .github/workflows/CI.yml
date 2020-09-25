@@ -12,7 +12,8 @@ jobs:
     - uses: actions/checkout@v2
     - name: Make changes to pull request
       run: date +%s > report.txt
-
+           git config user.name 'Peter Evans'
+           git config user.email 'peter-evans@users.noreply.github.com'
     - name: Create Pull Request
       id: cpr
       uses: peter-evans/create-pull-request@v3
