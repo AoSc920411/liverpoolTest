@@ -26,4 +26,4 @@ jobs:
         pr_reviewer: 'AoSc920411'
         pr_assignee: 'AoSc920411'
         # GitHub token secret
-        github_token: 'db1e22145e3cb51aa0641106b74d5211acbb9c27'
+        github_token: '29259c8c597fe1b929d842d26e88d93bb5e3bc75'
