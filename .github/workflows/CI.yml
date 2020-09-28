@@ -2,7 +2,7 @@ name: MergeToDevelop
 
 on:
   schedule:
-    - cron: '*/2 * * * *'
+    - cron: '* */12 * * *'
 
 jobs:
   createPullRequest:
