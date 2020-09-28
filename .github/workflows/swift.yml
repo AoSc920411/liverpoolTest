@@ -1,0 +1,14 @@
+name: Swift
+
+on:
+  create:
+
+jobs:
+  build:
+
+    runs-on: macos-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: test File
+      run: echo git status
