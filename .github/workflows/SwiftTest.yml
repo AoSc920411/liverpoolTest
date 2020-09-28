@@ -2,7 +2,7 @@ name: SwiftTest
 
 on:
   push:
-    branches: [ * ]
+    branches: [ feat ]
 
 jobs:
   build:
