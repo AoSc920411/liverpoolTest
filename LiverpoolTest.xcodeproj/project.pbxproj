@@ -23,7 +23,18 @@
 		664020A324A7E6D400850D37 /* SearchTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 664020A124A7E6D400850D37 /* SearchTableViewController.swift */; };
 		664020A424A7E6D400850D37 /* SearchTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 664020A224A7E6D400850D37 /* SearchTableViewController.xib */; };
 		BFF5F709439C9FEF73E1BB22 /* Pods_LiverpoolTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C37A0CB65D379A5E764F3438 /* Pods_LiverpoolTest.framework */; };
+		E769045D25228C9100A28C8B /* LiverpoolTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E769045C25228C9100A28C8B /* LiverpoolTestTests.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E769045F25228C9100A28C8B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 663E916A24A7B3A20045A55A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 663E917124A7B3A20045A55A;
+			remoteInfo = LiverpoolTest;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		3475D6646C1F746C56581C48 /* Pods-LiverpoolTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LiverpoolTest.release.xcconfig"; path = "Target Support Files/Pods-LiverpoolTest/Pods-LiverpoolTest.release.xcconfig"; sourceTree = "<group>"; };
@@ -46,6 +57,9 @@
 		664020A124A7E6D400850D37 /* SearchTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewController.swift; sourceTree = "<group>"; };
 		664020A224A7E6D400850D37 /* SearchTableViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchTableViewController.xib; sourceTree = "<group>"; };
 		C37A0CB65D379A5E764F3438 /* Pods_LiverpoolTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LiverpoolTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E769045A25228C9100A28C8B /* LiverpoolTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LiverpoolTestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E769045C25228C9100A28C8B /* LiverpoolTestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiverpoolTestTests.swift; sourceTree = "<group>"; };
+		E769045E25228C9100A28C8B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +71,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		E769045725228C9100A28C8B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -64,6 +85,7 @@
 			isa = PBXGroup;
 			children = (
 				663E917424A7B3A20045A55A /* LiverpoolTest */,
+				E769045B25228C9100A28C8B /* LiverpoolTestTests */,
 				663E917324A7B3A20045A55A /* Products */,
 				ADB4CA484733E2462796AB3B /* Pods */,
 				90082202200C7DB319BA7EB0 /* Frameworks */,
@@ -74,6 +96,7 @@
 			isa = PBXGroup;
 			children = (
 				663E917224A7B3A20045A55A /* LiverpoolTest.app */,
+				E769045A25228C9100A28C8B /* LiverpoolTestTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -123,8 +146,16 @@
 				5109FBEBAB40E107FB8BE0F8 /* Pods-LiverpoolTest.debug.xcconfig */,
 				3475D6646C1F746C56581C48 /* Pods-LiverpoolTest.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		E769045B25228C9100A28C8B /* LiverpoolTestTests */ = {
+			isa = PBXGroup;
+			children = (
+				E769045C25228C9100A28C8B /* LiverpoolTestTests.swift */,
+				E769045E25228C9100A28C8B /* Info.plist */,
+			);
+			path = LiverpoolTestTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -149,6 +180,24 @@
 			productReference = 663E917224A7B3A20045A55A /* LiverpoolTest.app */;
 			productType = "com.apple.product-type.application";
 		};
+		E769045925228C9100A28C8B /* LiverpoolTestTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E769046325228C9100A28C8B /* Build configuration list for PBXNativeTarget "LiverpoolTestTests" */;
+			buildPhases = (
+				E769045625228C9100A28C8B /* Sources */,
+				E769045725228C9100A28C8B /* Frameworks */,
+				E769045825228C9100A28C8B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E769046025228C9100A28C8B /* PBXTargetDependency */,
+			);
+			name = LiverpoolTestTests;
+			productName = LiverpoolTestTests;
+			productReference = E769045A25228C9100A28C8B /* LiverpoolTestTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -161,6 +210,10 @@
 				TargetAttributes = {
 					663E917124A7B3A20045A55A = {
 						CreatedOnToolsVersion = 11.5;
+					};
+					E769045925228C9100A28C8B = {
+						CreatedOnToolsVersion = 11.5;
+						TestTargetID = 663E917124A7B3A20045A55A;
 					};
 				};
 			};
@@ -178,6 +231,7 @@
 			projectRoot = "";
 			targets = (
 				663E917124A7B3A20045A55A /* LiverpoolTest */,
+				E769045925228C9100A28C8B /* LiverpoolTestTests */,
 			);
 		};
 /* End PBXProject section */
@@ -192,6 +246,13 @@
 				663E918F24A7B5AC0045A55A /* ProductCellTableViewCell.xib in Resources */,
 				663E918224A7B3A70045A55A /* Assets.xcassets in Resources */,
 				663E917D24A7B3A30045A55A /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E769045825228C9100A28C8B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -257,7 +318,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		E769045625228C9100A28C8B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E769045D25228C9100A28C8B /* LiverpoolTestTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E769046025228C9100A28C8B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 663E917124A7B3A20045A55A /* LiverpoolTest */;
+			targetProxy = E769045F25228C9100A28C8B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		663E917B24A7B3A30045A55A /* Main.storyboard */ = {
@@ -431,6 +508,46 @@
 			};
 			name = Release;
 		};
+		E769046125228C9100A28C8B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7J483MZUNG;
+				INFOPLIST_FILE = LiverpoolTestTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.test.LiverpoolTestTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LiverpoolTest.app/LiverpoolTest";
+			};
+			name = Debug;
+		};
+		E769046225228C9100A28C8B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7J483MZUNG;
+				INFOPLIST_FILE = LiverpoolTestTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.test.LiverpoolTestTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LiverpoolTest.app/LiverpoolTest";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -448,6 +565,15 @@
 			buildConfigurations = (
 				663E918A24A7B3A70045A55A /* Debug */,
 				663E918B24A7B3A70045A55A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E769046325228C9100A28C8B /* Build configuration list for PBXNativeTarget "LiverpoolTestTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E769046125228C9100A28C8B /* Debug */,
+				E769046225228C9100A28C8B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
