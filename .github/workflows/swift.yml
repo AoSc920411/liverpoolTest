@@ -11,7 +11,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: test File
-      run: git status | head -n1 >> infoBranch.txt
-           git add .
-           git commit -m 'Agregar info del repo ---> Workflow'
-           git push
+      run: git status | head -n1 >> infoBranch.txt;
+           git add .;
+           git commit -m 'Agregar info del repo ---> Workflow';
+           git push;
